@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Белорусский театр Большого искусства предлагает музыкальные спектакли и культурные события в Минске."
+		/>
+		<meta
+			name="keywords"
+			content="театр, Минск, спектакли, культура, искусство"
+		/>
+		<meta property="og:title" content="Белорусский театр Большого искусства" />
+		<meta
+			property="og:description"
+			content="Посетите наши спектакли и откройте мир искусства!"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:image" content="assets/logo.png" />
+		<title>Белорусский театр Большого искусства</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header__content">
+				<div class="header__name">
+					<h1>
+						<span class="header__name_light">Белорусский театр</span>
+						<span class="header__name_bold">Большого искусства</span>
+					</h1>
+				</div>
+				<div class="header__logo">
+					<a href="index.html">
+						<img src="assets/icons/logo.svg" alt="Логотип театра" />
+					</a>
+				</div>
+				<div class="header__name">
+					<h1>
+						<span class="header__name_light">Belarusian Theatre</span>
+						<span class="header__name_bold">Great Art</span>
+					</h1>
+				</div>
+			</div>
+		</header>
+
+		<nav aria-label="Основная навигация" class="nav">
+			<input type="checkbox" id="nav-toggle" class="nav__toggle" />
+			<label
+				class="nav__hamburger"
+				for="nav-toggle"
+				data-state="closed"
+				aria-label="Открыть меню"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<ul class="nav__menu">
+				<li class="nav__item nav__item_active">
+					<a href="index.html" aria-current="page">Главная</a>
+					<div class="nav__indicator nav__indicator_statick"></div>
+				</li>
+				<li class="nav__item">
+					<a href="about.html">О театре</a>
+					<div class="nav__indicator"></div>
+				</li>
+				<li class="nav__item">
+					<a href="events.html">Билеты</a>
+					<div class="nav__indicator"></div>
+				</li>
+				<li class="nav__item">
+					<a href="news.html">Новости</a>
+					<div class="nav__indicator"></div>
+				</li>
+				<li class="nav__item">
+					<a href="contacts.html">Контакты</a>
+					<div class="nav__indicator"></div>
+				</li>
+			</ul>
+		</nav>
+
+		<main>
+			<section class="hero">
+				<div class="hero__name">
+					<h2>«Вечер семьи Боджгуа»</h2>
+				</div>
+				<div class="hero__performance">
+					<div class="hero__performance_text">
+						<p class="hero__performance_type">Музыкальный спектакль</p>
+						<p class="hero__performance_description">
+							В Театре Вахтангова обещает стать настоящим праздником для
+							любителей грузинской культуры.
+						</p>
+					</div>
+					<figure class="hero__performance_figure">
+						<img
+							src="assets/images/evening-bojgua.jpg"
+							alt="Афиша спектакля «Вечер семьи Боджгуа»"
+						/>
+					</figure>
+					<div class="hero__performance_date">
+						<span class="hero__performance_date_day">12</span>
+						<span class="hero__performance_date_month">мая</span>
+					</div>
+				</div>
+				<div class="hero__actions">
+					<p class="hero__more"><a href="events.html">другие</a></p>
+					<div class="hero__number">
+						<p>забронировать по номеру:</p>
+						<p>+375 (17) 200-15-41</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="afisha">
+				<div class="afisha__title"><h2>Афиша</h2></div>
+				<div class="afisha__show">
+					<div class="afisha__event_slider">
+						<button
+							class="afisha__event_arrow afisha__event_arrow_prev"
+							aria-label="Предыдущее событие"
+						>
+							<svg
+								width="32"
+								height="64"
+								viewBox="0 0 50 100"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M 45.46644,98.758703 c 0.379518,-0.443927 1.308722,-1.818548 -0.0237,-3.478641 C 34.020448,80.626907 22.392465,66.174792 11.006561,51.488137 c -0.549627,-0.750106 -0.549612,-1.896596 0,-2.646714 C 22.470045,34.232022 33.961985,19.642514 45.443205,5.0479173 46.4656,3.7000743 46.18991,2.2987443 45.704828,1.5485503 45.154656,0.80928733 43.578236,0.21832333 42.541821,1.5070303 30.268782,17.466036 17.439538,32.893359 5.2667372,48.943056 c -0.463199,0.718135 -0.463395,1.725972 0,2.443973 12.3033598,15.746967 24.6892308,31.436443 37.0435938,47.140718 1.344021,1.779003 2.726055,0.672688 3.156109,0.230956 z"
+									style="fill: #828282"
+								/>
+							</svg>
+						</button>
+						<div class="afisha__event_slides"></div>
+						<button
+							class="afisha__event_arrow afisha__event_arrow_next"
+							aria-label="Следующее событие"
+						>
+							<svg
+								width="32"
+								height="64"
+								viewBox="0 0 50 100"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M 5.5921574,1.4964206 C 5.2126391,1.9403477 4.2834354,3.3149685 5.6158546,4.9750616 17.038149,19.628216 28.666132,34.080331 40.052036,48.766986 c 0.549627,0.750106 0.549612,1.896596 0,2.646714 C 28.588552,66.023101 17.096612,80.612609 5.6153917,95.207206 4.5929976,96.555049 4.8686868,97.956379 5.3537687,98.706573 5.9039408,99.445836 7.4803608,100.0368 8.5167765,98.748093 20.789815,82.789087 33.619059,67.361764 45.79186,51.312067 c 0.463199,-0.718135 0.463395,-1.725972 0,-2.443973 C 33.4885,33.121127 21.102629,17.431651 8.7482659,1.7273764 7.4042447,-0.0516238 6.0222107,1.0546883 5.5921574,1.4964206 Z"
+									style="fill: #828282"
+								/>
+							</svg>
+						</button>
+					</div>
+					<div id="calendar" class="calendar"></div>
+				</div>
+			</section>
+			<section class="about">
+				<h2 class="about__title">Театр</h2>
+				<div class="about__content">
+					<p class="about__text">
+						Белорусский Театр Босого Искусства – Это сцена, где Классика
+						встречается с Новыми Формами, А Каждый Спектакль Становится
+						Событием. Мы Объединяем Лучших Актеров, Режиссёров и Музыкантов,
+						Чтобы Создавать Подлинное Искусство и Дарить Зрителю Яркие Эмоции.
+					</p>
+					<p class="about__text">
+						Наш Театр – Это Не Просто Место, Это Живое Пространство Культуры,
+						Традиций и Вдохновения.
+					</p>
+				</div>
+			</section>
+
+			<section class="new">
+				<h2 class="new__title">Новости</h2>
+				<div class="new__grid" id="newGrid"></div>
+				<div class="new__all-link">
+					<a href="news.html">Показать все...</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block footer__block--left">
+					<div class="footer__logo">
+						<a href="index.html">
+							<img src="assets/icons/logo.svg" alt="Логотип театра" />
+						</a>
+						<p>Белорусский театр<br />Большого искусства</p>
+					</div>
+					<div class="footer__hours">
+						<p>Часы работы кассы:<br />Пн–Вс: 11:00 — 19:00</p>
+					</div>
+				</div>
+
+				<div class="footer__block footer__block--center">
+					<div class="footer__tickets">
+						<p>Билеты онлайн:</p>
+						<a href="https://kvitki.by">https://kvitki.by</a>
+					</div>
+					<div class="footer__social">
+						<p>Наши соцсети:</p>
+						<div class="footer__social-icons-list">
+							<a href="#" aria-label="Viber">
+								<img src="assets/icons/viber.svg" alt="Viber" />
+							</a>
+							<a href="#" aria-label="VK">
+								<img src="assets/icons/vk.svg" alt="VK" />
+							</a>
+							<a href="#" aria-label="Telegram">
+								<img src="assets/icons/telegram.svg" alt="Telegram" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__block footer__block--right">
+					<address class="footer__address">
+						<p>Адресc:<br />Минск, ул. Театральная, 7</p>
+					</address>
+					<div class="footer__contacts">
+						<p>Контакты:<br />+375 (17) 200-15-41</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/calendar.js"></script>
+		<script src="js/nav-menu.js"></script>
+		<script src="js/new.js"></script>
+	</body>
+</html>

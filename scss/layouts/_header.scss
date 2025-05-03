@@ -1,0 +1,107 @@
+.header {
+	width: 100%;
+	background-color: #010000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.25rem 0;
+	z-index: 1000;
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 1180px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0.5rem 1rem;
+	}
+
+	&__name {
+		font-family: 'Cormorant', sans-serif;
+		font-size: 1rem;
+		color: #828282;
+		text-align: center;
+		font-weight: bold;
+
+		& h1 { // reset
+			margin: 0;
+		}
+
+		&_light {
+			display: block;
+			letter-spacing: 0.1em;
+			font-weight: lighter;
+		}
+
+		&_bold {
+			display: block;
+			letter-spacing: 0.2em;
+			font-weight: bolder;
+		}
+	}
+
+	&__logo {
+		height: 6.5rem;
+		width: 6.5rem;
+		margin: 0 5rem;
+
+		& a {
+			display: block;
+
+			&:focus-visible {
+				outline: 2px solid #ffffff;
+				outline-offset: 2px;
+			}
+		}
+
+		& img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		&__name {
+			font-size: 0.9rem;
+		}
+
+		&__logo {
+			height: 5rem;
+			width: 5rem;
+			margin: 0 3rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 0.75rem 0;
+
+		&__content {
+			flex-direction: column;
+			padding: 0.25rem;
+		}
+
+		&__name {
+			font-size: 0.875rem;
+			margin: 0.25rem 0;
+		}
+
+		&__logo {
+			height: 4rem;
+			width: 4rem;
+			margin: 0.5rem 0;
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__name {
+			font-size: 0.75rem;
+		}
+
+		&__logo {
+			height: 3.5rem;
+			width: 3.5rem;
+		}
+	}
+}

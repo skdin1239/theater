@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Описание спектакля в Белорусском театре Большого искусства."
+		/>
+		<meta
+			name="keywords"
+			content="театр, Минск, спектакли, культура, искусство"
+		/>
+		<meta property="og:title" content="Белорусский театр Большого искусства" />
+		<meta
+			property="og:description"
+			content="Посетите наши спектакли и откройте мир искусства!"
+		/>
+		<meta property="og:image" content="assets/logo.png" />
+		<title>Белорусский театр Большого искусства - Спектакль</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body class="page">
+		<header class="header page__header">
+			<div class="header__content">
+				<div class="header__name">
+					<h1 class="header__name_light">Белорусский театр</h1>
+					<h1 class="header__name_bold">Большого искусства</h1>
+				</div>
+				<div class="header__logo">
+					<a href="index.html"
+						><img src="assets/icons/logo.svg" alt="Логотип театра"
+					/></a>
+				</div>
+				<div class="header__name">
+					<h1 class="header__name_light">Belarusian Theatre</h1>
+					<h1 class="header__name_bold">Great Art</h1>
+				</div>
+			</div>
+		</header>
+
+		<nav aria-label="Основная навигация" class="nav">
+			<ul class="nav__menu">
+				<div class="nav__indicator"></div>
+				<li class="nav__item">
+					<a href="index.html"><p>Главная</p></a>
+				</li>
+				<li class="nav__item">
+					<a href="abotu.html"><p>О театре</p></a>
+				</li>
+				<li class="nav__item">
+					<a href="events.html"><p>Билеты</p></a>
+				</li>
+				<li class="nav__item nav__item_selected">
+					<a href="news.html"><p>Новости</p></a>
+				</li>
+				<li class="nav__item">
+					<a href="#"><p>Контакты</p></a>
+				</li>
+			</ul>
+			<div class="nav__hamburger" aria-label="Открыть меню">☰</div>
+		</nav>
+
+		<main id="newsPage" style="display: none">
+			<section class="news-detail">
+				<div class="news-detail__main">
+					<div class="news-detail__new">
+						<h1 class="news-detail__title" id="newsTitle"></h1>
+						<p class="news-detail__date" id="newsDate"></p>
+						<img
+							class="news-detail__image"
+							id="newsImage"
+							src=""
+							alt="Фото новости"
+						/>
+						<div class="news-detail__text" id="newsText"></div>
+					</div>
+					<div class="news-detail__sidebar">
+						<h2>Другие новости:</h2>
+						<div class="news-detail__other-news" id="otherNews"></div>
+					</div>
+					<a href="javascript:history.back()" class="news-detail__back"
+						>Назад</a
+					>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__left">
+					<div class="footer__top">
+						<a href="index.html"
+							><img src="assets/icons/logo.svg" alt="Логотип театра"
+						/></a>
+						<p>Белорусский театр <br />Большого искусства</p>
+					</div>
+					<p class="footer__hours">Часы работы кассы: Пн-Вс: 11:00 – 19:00</p>
+				</div>
+				<div class="footer__center">
+					<p class="footer__tickets">
+						Билеты онлайн: <a href="https://kvitki.by">https://kvitki.by</a>
+					</p>
+					<div class="footer__social-icons">
+						<p>Наши социальные сети:</p>
+						<a href="#"><img src="assets/icons/vk.svg" alt="VK" /></a>
+						<a href="#"><img src="assets/icons/viber.svg" alt="Viber" /></a>
+						<a href="#"
+							><img src="assets/icons/telegram.svg" alt="Telegram"
+						/></a>
+					</div>
+				</div>
+				<div class="footer__right">
+					<p class="footer__address">Адрес: Минск, ул. Театральная, 7</p>
+					<p class="footer__contacts">Контакты: +375 (17) 200-15-41</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/nav-menu.js"></script>
+		<script src="js/news-page.js"></script>
+	</body>
+</html>

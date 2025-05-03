@@ -1,0 +1,218 @@
+.event {
+	padding: 40px 20px;
+	position: relative; // Для позиционирования псевдоэлемента
+	overflow-x: hidden;
+	// Псевдоэлемент для фонового изображения с размытием и прозрачностью
+	main {
+		max-width: 1180px;
+	}
+	&::before {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: #010000;
+		background-image: url('../assets/images/background.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		filter: blur(3px);
+		opacity: 0.1;
+		z-index: -1;
+	}
+
+	&__content {
+		max-width: 1180px;
+		background: rgba(
+			255,
+			255,
+			255,
+			0.1
+		); // Полупрозрачный белый фон для читаемости
+		padding: 30px;
+		border-radius: 12px;
+		box-shadow: 0 0 20px rgb(255, 255, 255, 0.1);
+		font-family: 'PT-Sans', sans-serif;
+		position: relative; // Чтобы контент был выше фона
+		z-index: 1; // Контент поверх псевдоэлемента
+	}
+
+	&__image {
+		width: auto;
+		max-height: 400px;
+		object-fit: cover;
+		border-radius: 12px;
+		margin: 10px 40px 20px 10px;
+		float: left;
+		display: block;
+	}
+
+	&__title {
+		font-size: 2.8rem;
+		font-weight: bold;
+		font-family: 'Cormonta';
+		font-style: italic;
+		margin: 0 0 15px;
+		color: #ffffff;
+		margin-bottom: 90px;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: row;
+	}
+	&__type,
+	&__age {
+		display: inline-block;
+		font-size: 1.4rem;
+		font-family: 'PT-Sans';
+		color: #ffffff;
+		text-align: center;
+		padding: 4px 10px;
+		background-color: #a80000;
+		border-radius: 50px;
+	}
+
+	&_second-part {
+		margin-top: 40px;
+		display: flex;
+		flex-direction: row;
+		gap: 50px;
+	}
+
+	&__buy-tel,
+	&__buy-online {
+		font-size: 1.4rem;
+		margin: 10px 0;
+		color: #ffffff;
+
+		span {
+			font-size: 1.2rem;
+			font-family: 'Molot';
+		}
+	}
+
+	&__buy-online a {
+		font-size: 1.2rem;
+		font-family: 'Molot';
+		color: rgb(92, 92, 255);
+		text-decoration: none;
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: darken(rgb(75, 75, 255), 10%);
+		}
+	}
+
+	&__date,
+	&__time,
+	&__director,
+	&__price {
+		font-family: 'PT-Sans';
+		font-size: 1.7rem;
+		margin: 8px 0;
+		color: #ffffff;
+		display: block;
+	}
+
+	&__description {
+		font-size: 1.7rem;
+		line-height: 1.5;
+		margin: 15px 0;
+		font-family: 'PT-Sans';
+		color: #ffffff;
+		text-align: justify;
+		padding-bottom: 10px;
+		border-bottom: 2px solid #a80000;
+	}
+
+	&__back {
+		display: inline-block;
+		margin-top: 20px;
+		color: #d4a373;
+		font-weight: bolder;
+		font-style: italic;
+		text-decoration: underline;
+		font-size: 1.7rem;
+		width: 220px;
+
+		&:hover {
+			color: darken(#d4a373, 10%);
+		}
+	}
+
+	&__cast {
+		margin: 20px 0;
+		font-size: 1.7rem;
+		line-height: 1.5;
+
+		h3 {
+			font-size: 2.8rem;
+			font-weight: bold;
+			margin-bottom: 10px;
+			font-family: 'Cormorant';
+			font-style: italic;
+			color: #ffffff;
+			padding-bottom: 5px;
+		}
+
+		p {
+			margin: 8px 0;
+			color: #ffffff;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 20px 10px;
+
+		&::before {
+			filter: blur(8px); // Уменьшаем размытие для мобильных
+		}
+
+		&__content {
+			padding: 20px;
+		}
+
+		&__image {
+			max-height: 300px;
+		}
+
+		&__title {
+			font-size: 1.8rem;
+		}
+
+		&__type,
+		&__age,
+		&__date,
+		&__time,
+		&__director,
+		&__price {
+			font-size: 1rem;
+		}
+
+		&__description,
+		&__cast {
+			font-size: 1rem;
+
+			h3 {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__content {
+			width: 95%;
+		}
+
+		&__image {
+			max-height: 200px;
+		}
+
+		&__title {
+			font-size: 1.5rem;
+		}
+	}
+}
