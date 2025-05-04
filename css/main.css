@@ -1512,7 +1512,7 @@ main {
 }
 
 .about__row {
-  margin-bottom: 2%;
+  margin: 2% 0;
 }
 .about__row--text-photo {
   display: flex;
