@@ -37,7 +37,6 @@
 		}
 
 		&:hover {
-
 			& > a {
 				color: #a80000;
 				text-decoration: underline;
@@ -77,6 +76,11 @@
 		transform: translate(-50%, -50%);
 		z-index: -1;
 		transition: opacity 0.3s ease;
+	}
+
+	&__name,
+	&__logo {
+		display: none;
 	}
 
 	&__hamburger {
@@ -138,9 +142,44 @@
 	}
 
 	@media (max-width: 768px) {
+		&__name,
+		&__logo {
+			display: block;
+		}
+
+		& {
+			position: relative;
+
+			p {
+				display: block;
+				width: 80%;
+				font-family: 'Cormorant', serif;
+				font-style: italic;
+				font-weight: bold;
+				font-size: 2rem;
+				text-align: center;
+				color: #ffffff;
+				margin: 0 auto;
+				margin-top: -1%;
+			}
+
+			&__logo {
+				width: 40px;
+				left: 0;
+				img {
+					position: absolute;
+					top: -7px;
+					left: 25%;
+					width: 100%;
+				}
+			}
+		}
+
 		min-height: 3rem;
 		background: rgba(0, 0, 0, 0.7);
 
+		&__name,
+		&__logo,
 		&__hamburger {
 			display: block;
 			position: absolute;

@@ -110,6 +110,9 @@ main {
   z-index: -1;
   transition: opacity 0.3s ease;
 }
+.nav__name, .nav__logo {
+  display: none;
+}
 .nav__hamburger {
   display: none;
   width: 1.875rem;
@@ -161,7 +164,35 @@ main {
     min-height: 3rem;
     background: rgba(0, 0, 0, 0.7);
   }
-  .nav__hamburger {
+  .nav__name, .nav__logo {
+    display: block;
+  }
+  .nav {
+    position: relative;
+  }
+  .nav p {
+    display: block;
+    width: 80%;
+    font-family: "Cormorant", serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 auto;
+    margin-top: -1%;
+  }
+  .nav__logo {
+    width: 40px;
+    left: 0;
+  }
+  .nav__logo img {
+    position: absolute;
+    top: -7px;
+    left: 25%;
+    width: 100%;
+  }
+  .nav__name, .nav__logo, .nav__hamburger {
     display: block;
     position: absolute;
     right: 1rem;
@@ -986,6 +1017,10 @@ main {
   font-family: "Molot", sans-serif;
 }
 @media (max-width: 768px) {
+  .hero .nav__name,
+  .hero .nav__logo {
+    display: none;
+  }
   .hero__name {
     font-size: 1.5rem;
     text-align: center;
@@ -1477,7 +1512,7 @@ main {
 }
 
 .about__row {
-  margin-bottom: 50px;
+  margin-bottom: 2%;
 }
 .about__row--text-photo {
   display: flex;
@@ -1503,7 +1538,7 @@ main {
 }
 .about__row--columns {
   display: flex;
-  gap: 50px;
+  gap: 1%;
 }
 .about__row--columns .about__column {
   flex: 1;
@@ -1521,18 +1556,18 @@ main {
   font-family: "Cormorant", serif;
   font-style: italic;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 3rem;
   text-align: center;
   color: #ffffff;
-  margin: 15px 0;
+  margin: 1% 0;
 }
 .about__description {
   font-family: "PT-Sans", sans-serif;
-  font-size: 28px;
+  font-size: 1.5rem;
   letter-spacing: 2px;
   line-height: 150%;
   color: #828282;
-  margin: 20px 0;
+  margin: 2% 0;
 }
 .about__image-content {
   width: 100%;
@@ -1542,7 +1577,7 @@ main {
   list-style: none;
   padding: 0;
   font-family: "PT-Sans", sans-serif;
-  font-size: 28px;
+  font-size: 1.5rem;
   letter-spacing: 2px;
   line-height: 150%;
   color: #828282;
@@ -1550,22 +1585,66 @@ main {
 .about__list-item {
   margin-bottom: 10px;
 }
-
 @media (max-width: 1080px) {
   .about__row--text-photo, .about__row--photo-text {
     flex-direction: column;
   }
-  .about__row--text-photo .about__text,
-  .about__row--text-photo .about__image, .about__row--photo-text .about__text,
-  .about__row--photo-text .about__image {
+  .about__row--text-photo__text, .about__row--text-photo__image, .about__row--photo-text__text, .about__row--photo-text__image {
+    width: 100%;
+  }
+  .about__row .about__image,
+  .about__row .about__text {
     width: 100%;
   }
   .about__row--columns {
     flex-direction: column;
     gap: 30px;
   }
-  .about__row--columns .about__column {
+  .about__row--columns__column {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+  .about__title {
+    font-size: 2.25rem;
+  }
+  .about .about__description {
+    font-size: 1.5rem;
+  }
+  .about .about__list {
+    font-size: 1.5rem;
+  }
+  .about .about__row .about--text-photo,
+  .about .about__row .about--photo-text {
+    flex-direction: column;
+  }
+  .about .about__row .about--text-photo .about__text,
+  .about .about__row .about--text-photo .about__image,
+  .about .about__row .about--photo-text .about__text,
+  .about .about__row .about--photo-text .about__image {
+    width: 100%;
+  }
+  .about .about__row .about--columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about .about__row .about--columns .about__column {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .about .about__title {
+    font-size: 1.5rem;
+  }
+  .about .about__description {
+    font-size: 0.75rem;
+  }
+  .about .about__list {
+    font-size: 0.75rem;
   }
 }
 .news-detail {

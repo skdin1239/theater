@@ -1,7 +1,6 @@
 .about {
-
 	&__row {
-		margin-bottom: 50px;
+		margin-bottom: 2%;
 
 		&--text-photo {
 			display: flex;
@@ -33,7 +32,7 @@
 
 		&--columns {
 			display: flex;
-			gap: 50px;
+			gap: 1%;
 
 			.about__column {
 				flex: 1;
@@ -56,19 +55,19 @@
 		font-family: 'Cormorant', serif;
 		font-style: italic;
 		font-weight: bold;
-		font-size: 48px;
+		font-size: 3rem;
 		text-align: center;
 		color: #ffffff;
-		margin: 15px 0;
+		margin: 1% 0;
 	}
-	
+
 	&__description {
 		font-family: 'PT-Sans', sans-serif;
-		font-size: 28px;
+		font-size: 1.5rem;
 		letter-spacing: 2px;
 		line-height: 150%;
 		color: #828282;
-		margin: 20px 0;
+		margin: 2% 0;
 	}
 
 	&__image-content {
@@ -80,7 +79,7 @@
 		list-style: none;
 		padding: 0;
 		font-family: 'PT-Sans', sans-serif;
-		font-size: 28px;
+		font-size: 1.5rem;
 		letter-spacing: 2px;
 		line-height: 150%;
 		color: #828282;
@@ -89,13 +88,57 @@
 	&__list-item {
 		margin-bottom: 10px;
 	}
-}
 
-@media (max-width: 1080px) {
+	@media (max-width: 1080px) {
+		& {
+			&__row {
+				&--text-photo,
+				&--photo-text {
+					flex-direction: column;
+
+					&__text,
+					&__image {
+						width: 100%;
+					}
+				}
+
+				.about__image,
+				.about__text {
+					width: 100%;
+				}
+
+				&--columns {
+					flex-direction: column;
+					gap: 30px;
+					
+					&__column {
+						flex-direction: column;
+					}
+				}
+			}
+		}
+	}
+}
+	
+@media (max-width: 768px) {
+	.header {
+		display: none;
+	}
 	.about {
-		&__row {
-			&--text-photo,
-			&--photo-text {
+		&__title {
+			font-size: 2.25rem;
+		}
+
+		.about__description {
+			font-size: 1.5rem;
+		}
+
+		.about__list {
+			font-size: 1.5rem;
+		}
+		.about__row {
+			.about--text-photo,
+			.about--photo-text {
 				flex-direction: column;
 
 				.about__text,
@@ -104,7 +147,7 @@
 				}
 			}
 
-			&--columns {
+			.about--columns {
 				flex-direction: column;
 				gap: 30px;
 
@@ -115,3 +158,18 @@
 		}
 	}
 }
+	@media (max-width: 480px) {
+		.about {
+			.about__title {
+				font-size: 1.5rem;
+			}
+
+			.about__description {
+				font-size: 0.75rem;
+			}
+
+			.about__list {
+				font-size: 0.75rem;
+			}
+		}
+	}
