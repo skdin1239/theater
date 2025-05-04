@@ -164,12 +164,6 @@ main {
     min-height: 3rem;
     background: rgba(0, 0, 0, 0.7);
   }
-  .nav__name, .nav__logo {
-    display: block;
-  }
-  .nav {
-    position: relative;
-  }
   .nav p {
     display: block;
     width: 80%;
@@ -191,6 +185,12 @@ main {
     top: -7px;
     left: 25%;
     width: 100%;
+  }
+  .nav__name, .nav__logo {
+    display: block;
+  }
+  .nav__menu {
+    position: relative;
   }
   .nav__name, .nav__logo, .nav__hamburger {
     display: block;
