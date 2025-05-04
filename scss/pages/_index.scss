@@ -58,10 +58,10 @@
 			font-family: 'Cormorant', serif;
 			font-style: italic;
 			font-weight: bolder;
-			color: rgba(230, 230, 230, 0.9); /* Увеличена контрастность */
+			color: rgba(230, 230, 230, 0.9);
 
 			&_day {
-				font-size: 5rem; /* 88px */
+				font-size: 5rem;
 			}
 
 			&_month {
@@ -132,18 +132,17 @@
 			}
 
 			&_date {
-				position: absolute;
-				text-align: right;
-				margin-bottom: 1rem;
+			top: -1rem;
+			right: 0;
 
-				&_day {
-					font-size: 4rem;
-				}
-
-				&_month {
-					font-size: 2.25rem;
-				}
+			&_day {
+				font-size: 4rem;
 			}
+
+			&_month {
+				font-size: 2.25rem;
+			}
+		}
 		}
 
 		&__actions {
