@@ -43,6 +43,11 @@ main {
     padding: 0 3%;
   }
 }
+nav {
+  margin: 0;
+  padding: 0;
+}
+
 .nav {
   min-height: 3.5rem;
   width: 100%;
