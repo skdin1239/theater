@@ -907,7 +907,7 @@ main {
   color: white;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .hero__performance {
   position: relative;
@@ -951,7 +951,7 @@ main {
   color: rgba(230, 230, 230, 0.9);
 }
 .hero__performance_date_day {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .hero__performance_date_month {
   font-size: 3rem;
@@ -1011,10 +1011,10 @@ main {
     right: 0;
   }
   .hero__performance_date_day {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .hero__performance_date_month {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .hero__actions {
     width: 100%;
@@ -1050,15 +1050,15 @@ main {
   .hero__performance_date {
     position: absolute;
     top: 0.5rem;
-    right: 40%;
+    right: 10vw;
     text-align: right;
     margin-bottom: 1rem;
   }
   .hero__performance_date_day {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .hero__performance_date_month {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   .hero__actions {
     width: 100%;
