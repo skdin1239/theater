@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
-			content="Описание спектакля в Белорусском театре Большого искусства."
+			content="Белорусский театр Большого искусства предлагает музыкальные спектакли и культурные события в Минске."
 		/>
 		<meta
 			name="keywords"
@@ -16,96 +16,122 @@
 			property="og:description"
 			content="Посетите наши спектакли и откройте мир искусства!"
 		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta property="og:image" content="assets/logo.png" />
-		<title>Белорусский театр Большого искусства - Спектакль</title>
+		<title>Белорусский театр Большого искусства</title>
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
-	<body class="page">
-		<header class="header page__header">
+
+	<body>
+		<header class="header">
 			<div class="header__content">
 				<div class="header__name">
-					<h1 class="header__name_light">Белорусский театр</h1>
-					<h1 class="header__name_bold">Большого искусства</h1>
+					<h1>
+						<span class="header__name_light">Белорусский театр</span>
+						<span class="header__name_bold">Большого искусства</span>
+					</h1>
 				</div>
 				<div class="header__logo">
-					<a href="index.html"><img src="assets/icons/logo.svg" alt="Логотип театра" /></a>
+					<a href="index.html">
+						<img src="assets/icons/logo.svg" alt="Логотип театра" />
+					</a>
 				</div>
 				<div class="header__name">
-					<h1 class="header__name_light">Belarusian Theatre</h1>
-					<h1 class="header__name_bold">Great Art</h1>
+					<h1>
+						<span class="header__name_light">Belarusian Theatre</span>
+						<span class="header__name_bold">Great Art</span>
+					</h1>
 				</div>
 			</div>
 		</header>
 
 		<nav aria-label="Основная навигация" class="nav">
 			<input type="checkbox" id="nav-toggle" class="nav__toggle" />
-			<label class="nav__hamburger" for="nav-toggle" aria-label="Открыть меню">
+			<label
+				class="nav__hamburger"
+				for="nav-toggle"
+				data-state="closed"
+				aria-label="Открыть меню"
+			>
 				<span></span>
 				<span></span>
 				<span></span>
 			</label>
 			<ul class="nav__menu">
-				<div class="nav__indicator"></div>
-				<li class="nav__item" style="--item-index: 0">
-					<a href="index.html"><p>Главная</p></a>
+				<li class="nav__item nav__item_active">
+					<a href="index.html" aria-current="page">Главная</a>
+					<div class="nav__indicator nav__indicator_statick"></div>
 				</li>
-				<li class="nav__item nav__item_selected" style="--item-index: 1">
-					<a href="abotu.html"><p>О театре</p></a>
+				<li class="nav__item">
+					<a href="about.html">О театре</a>
+					<div class="nav__indicator"></div>
 				</li>
-				<li class="nav__item" style="--item-index: 2">
-					<a href="events.html"><p>Билеты</p></a>
+				<li class="nav__item">
+					<a href="events.html">Билеты</a>
+					<div class="nav__indicator"></div>
 				</li>
-				<li class="nav__item" style="--item-index: 3">
-					<a href="news.html"><p>Новости</p></a>
+				<li class="nav__item">
+					<a href="news.html">Новости</a>
+					<div class="nav__indicator"></div>
 				</li>
-				<li class="nav__item" style="--item-index: 4">
-					<a href="#"><p>Контакты</p></a>
+				<li class="nav__item">
+					<a href="contacts.html">Контакты</a>
+					<div class="nav__indicator"></div>
 				</li>
 			</ul>
 		</nav>
 
 		<main>
-			<section class="about-page">
+			<section class="about">
 				<!-- Row 1: Text and Photo -->
-				<div class="about-page__row about-page__row--text-photo">
-					<div class="about-page__text">
-						<h2 class="about-page__title">Немного истории</h2>
-						<p>
+				<div class="about__row about__row--text-photo">
+					<div class="about__text">
+						<h2 class="about__title">Немного истории</h2>
+						<p class="about__description">
 							Театр был основан в 1952 году и с тех пор остаётся культурным
 							сердцем Минска. В разные годы на его сцене блистали великие
 							актёры, а постановки становились классикой белорусского
 							театрального искусства.
 						</p>
 					</div>
-					<div class="about-page__image">
+					<div class="about__image">
 						<img
 							src="assets/images/history.jpg"
 							alt="Театральная сцена с актёрами"
+							class="about__image-content"
 						/>
 					</div>
 				</div>
 
 				<!-- Row 2: Two columns with [Text Photo] and [Photo Text] -->
-				<div class="about-page__row about-page__row--columns">
-					<div class="about-page__column">
-						<div class="about-page__text">
-							<h2 class="about-page__title">Миссия и ценности</h2>
-							<p>
+				<div class="about__row about__row--columns">
+					<div class="about__column">
+						<div class="about__text">
+							<h2 class="about__title">Миссия и ценности</h2>
+							<p class="about__description">
 								Наша миссия — говорить со зрителем языком искусства о важном,
 								вечном и настоящем.
 							</p>
 						</div>
-						<div class="about-page__image">
-							<img src="assets/images/mission.jpg" alt="Сцена из постановки" />
+						<div class="about__image">
+							<img
+								src="assets/images/mission.jpg"
+								alt="Сцена из постановки"
+								class="about__image-content"
+							/>
 						</div>
 					</div>
-					<div class="about-page__column">
-						<div class="about-page__image">
-							<img src="assets/images/mission2.jpg" alt="Сцена из постановки" />
+					<div class="about__column">
+						<div class="about__image">
+							<img
+								src="assets/images/mission2.jpg"
+								alt="Сцена из постановки"
+								class="about__image-content"
+							/>
 						</div>
-						<div class="about-page__text">
-							<h2 class="about-page__title">Наша команда и достижения</h2>
-							<p>
+						<div class="about__text">
+							<h2 class="about__title">Наша команда и достижения</h2>
+							<p class="about__description">
 								Наша труппа объединяет актёров, режиссёров, художников,
 								музыкантов, сценографов и технических специалистов, преданных
 								своему делу.
@@ -114,38 +140,42 @@
 					</div>
 				</div>
 
-				<!-- Row 3: Photo and Text (with list) -->
-				<div class="about-page__row about-page__row--photo-text">
-					<div class="about-page__image">
-						<img src="assets/images/team.jpg" alt="Команда театра" />
+				<!-- Row 3: Photo and Text -->
+				<div class="about__row about__row--photo-text">
+					<div class="about__image">
+						<img
+							src="assets/images/team.jpg"
+							alt="Команда театра"
+							class="about__image-content"
+						/>
 					</div>
-					<div class="about-page__text">
-						<p>
+					<div class="about__text">
+						<p class="about__description">
 							Здесь работают мастера с десятилетиями опыта и молодые таланты,
 							которые уже сегодня завоёвывают сердца зрителей.
 						</p>
 					</div>
 				</div>
 
-				<!-- Row 4: Text Only -->
-				<div class="about-page__row about-page__row--text">
-					<div class="about-page__text">
-						<ul class="about-page__list">
-							<li class="about-page__list-item">
+				<!-- Row 4: Text with List -->
+				<div class="about__row about__row--text-only">
+					<div class="about__text">
+						<ul class="about__list">
+							<li class="about__list-item">
 								Более 150 спектаклей, поставленных на сцене театра;
 							</li>
-							<li class="about-page__list-item">
+							<li class="about__list-item">
 								Участие в 20 международных фестивалях и конкурсах;
 							</li>
-							<li class="about-page__list-item">
+							<li class="about__list-item">
 								10 престижных наград в области драматического и музыкального
 								искусства;
 							</li>
-							<li class="about-page__list-item">
+							<li class="about__list-item">
 								Совместные проекты с театрами из Грузии, России, Польши, Литвы и
 								Франции;
 							</li>
-							<li class="about-page__list-item">
+							<li class="about__list-item">
 								Постоянное участие в культурных инициативах и образовательных
 								программах.
 							</li>
@@ -157,29 +187,45 @@
 
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__left">
-					<div class="footer__top">
-						<a href="index.html"><img src="assets/icons/logo.svg" alt="Логотип театра" /></a>
-						<p>Белорусский театр <br />Большого искусства</p>
+				<div class="footer__block footer__block--left">
+					<div class="footer__logo">
+						<a href="index.html">
+							<img src="assets/icons/logo.svg" alt="Логотип театра" />
+						</a>
+						<p>Белорусский театр<br />Большого искусства</p>
 					</div>
-					<p class="footer__hours">Часы работы кассы: Пн-Вс: 11:00 – 19:00</p>
-				</div>
-				<div class="footer__center">
-					<p class="footer__tickets">
-						Билеты онлайн: <a href="https://kvitki.by">https://kvitki.by</a>
-					</p>
-					<div class="footer__social-icons">
-						<p>Наши социальные сети:</p>
-						<a href="#"><img src="assets/icons/vk.svg" alt="VK" /></a>
-						<a href="#"><img src="assets/icons/viber.svg" alt="Viber" /></a>
-						<a href="#"
-							><img src="assets/icons/telegram.svg" alt="Telegram"
-						/></a>
+					<div class="footer__hours">
+						<p>Часы работы кассы:<br />Пн–Вс: 11:00 — 19:00</p>
 					</div>
 				</div>
-				<div class="footer__right">
-					<p class="footer__address">Адрес: Минск, ул. Театральная, 7</p>
-					<p class="footer__contacts">Контакты: +375 (17) 200-15-41</p>
+
+				<div class="footer__block footer__block--center">
+					<div class="footer__tickets">
+						<p>Билеты онлайн:</p>
+						<a href="https://kvitki.by">https://kvitki.by</a>
+					</div>
+					<div class="footer__social">
+						<p>Наши соцсети:</p>
+						<div class="footer__social-icons-list">
+							<a href="#" aria-label="Viber">
+								<img src="assets/icons/viber.svg" alt="Viber" />
+							</a>
+							<a href="#" aria-label="VK">
+								<img src="assets/icons/vk.svg" alt="VK" />
+							</a>
+							<a href="#" aria-label="Telegram">
+								<img src="assets/icons/telegram.svg" alt="Telegram" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__block footer__block--right">
+					<address class="footer__address">
+						<p>Адресc:<br />Минск, ул. Театральная, 7</p>
+					</address>
+					<div class="footer__contacts">
+						<p>Контакты:<br />+375 (17) 200-15-41</p>
+					</div>
 				</div>
 			</div>
 		</footer>

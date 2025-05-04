@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
-			content="Описание спектакля в Белорусском театре Большого искусства."
+			content="Белорусский театр Большого искусства предлагает музыкальные спектакли и культурные события в Минске."
 		/>
 		<meta
 			name="keywords"
@@ -16,88 +16,132 @@
 			property="og:description"
 			content="Посетите наши спектакли и откройте мир искусства!"
 		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta property="og:image" content="assets/logo.png" />
-		<title>Белорусский театр Большого искусства - Спектакль</title>
+		<title>Белорусский театр Большого искусства</title>
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
-	<body class="page">
-		<header class="header page__header">
+
+	<body>
+		<header class="header">
 			<div class="header__content">
 				<div class="header__name">
-					<h1 class="header__name_light">Белорусский театр</h1>
-					<h1 class="header__name_bold">Большого искусства</h1>
+					<h1>
+						<span class="header__name_light">Белорусский театр</span>
+						<span class="header__name_bold">Большого искусства</span>
+					</h1>
 				</div>
 				<div class="header__logo">
-					<a href="index.html"><img src="assets/icons/logo.svg" alt="Логотип театра" /></a>
+					<a href="index.html">
+						<img src="assets/icons/logo.svg" alt="Логотип театра" />
+					</a>
 				</div>
 				<div class="header__name">
-					<h1 class="header__name_light">Belarusian Theatre</h1>
-					<h1 class="header__name_bold">Great Art</h1>
+					<h1>
+						<span class="header__name_light">Belarusian Theatre</span>
+						<span class="header__name_bold">Great Art</span>
+					</h1>
 				</div>
 			</div>
 		</header>
 
 		<nav aria-label="Основная навигация" class="nav">
+			<input type="checkbox" id="nav-toggle" class="nav__toggle" />
+			<label
+				class="nav__hamburger"
+				for="nav-toggle"
+				data-state="closed"
+				aria-label="Открыть меню"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
 			<ul class="nav__menu">
-				<div class="nav__indicator"></div>
-				<li class="nav__item">
-					<a href="index.html"><p>Главная</p></a>
+				<li class="nav__item nav__item_active">
+					<a href="index.html" aria-current="page">Главная</a>
+					<div class="nav__indicator nav__indicator_statick"></div>
 				</li>
 				<li class="nav__item">
-					<a href="abotu.html"><p>О театре</p></a>
+					<a href="about.html">О театре</a>
+					<div class="nav__indicator"></div>
 				</li>
 				<li class="nav__item">
-					<a href="events.html"><p>Билеты</p></a>
-				</li>
-				<li class="nav__item nav__item_selected">
-					<a href="news.html"><p>Новости</p></a>
+					<a href="events.html">Билеты</a>
+					<div class="nav__indicator"></div>
 				</li>
 				<li class="nav__item">
-					<a href="#"><p>Контакты</p></a>
+					<a href="news.html">Новости</a>
+					<div class="nav__indicator"></div>
+				</li>
+				<li class="nav__item">
+					<a href="contacts.html">Контакты</a>
+					<div class="nav__indicator"></div>
 				</li>
 			</ul>
-			<div class="nav__hamburger" aria-label="Открыть меню">☰</div>
 		</nav>
+		
 		<main>
 			<section class="news">
-        <h1 class="news__heading">Новости</h1>
-        <div class="news__controls">
-            <input class="news__controls_input" type="text" id="searchInput" placeholder="Поиск по названию">
-            <select class="news__controls_select" id="categoryFilter">
-                <option value="">Все категории</option>
-                <option value="events">События</option>
-                <option value="releases">Пресс-релизы</option>
-            </select>
-        </div>
-        <div class="news__grid" id="newsGrid"></div>
-    </section>
+				<h1 class="news__heading">Новости</h1>
+				<div class="news__controls">
+					<input
+						class="news__controls_input"
+						type="text"
+						id="searchInput"
+						placeholder="Поиск по названию"
+					/>
+					<select class="news__controls_select" id="categoryFilter">
+						<option value="">Все категории</option>
+						<option value="events">События</option>
+						<option value="releases">Пресс-релизы</option>
+					</select>
+				</div>
+				<div class="news__grid" id="newsGrid"></div>
+			</section>
 		</main>
 
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__left">
-					<div class="footer__top">
-						<a href="index.html"><img src="assets/icons/logo.svg" alt="Логотип театра" /></a>
-						<p>Белорусский театр <br />Большого искусства</p>
+				<div class="footer__block footer__block--left">
+					<div class="footer__logo">
+						<a href="index.html">
+							<img src="assets/icons/logo.svg" alt="Логотип театра" />
+						</a>
+						<p>Белорусский театр<br />Большого искусства</p>
 					</div>
-					<p class="footer__hours">Часы работы кассы: Пн-Вс: 11:00 – 19:00</p>
-				</div>
-				<div class="footer__center">
-					<p class="footer__tickets">
-						Билеты онлайн: <a href="https://kvitki.by">https://kvitki.by</a>
-					</p>
-					<div class="footer__social-icons">
-						<p>Наши социальные сети:</p>
-						<a href="#"><img src="assets/icons/vk.svg" alt="VK" /></a>
-						<a href="#"><img src="assets/icons/viber.svg" alt="Viber" /></a>
-						<a href="#"
-							><img src="assets/icons/telegram.svg" alt="Telegram"
-						/></a>
+					<div class="footer__hours">
+						<p>Часы работы кассы:<br />Пн–Вс: 11:00 — 19:00</p>
 					</div>
 				</div>
-				<div class="footer__right">
-					<p class="footer__address">Адрес: Минск, ул. Театральная, 7</p>
-					<p class="footer__contacts">Контакты: +375 (17) 200-15-41</p>
+
+				<div class="footer__block footer__block--center">
+					<div class="footer__tickets">
+						<p>Билеты онлайн:</p>
+						<a href="https://kvitki.by">https://kvitki.by</a>
+					</div>
+					<div class="footer__social">
+						<p>Наши соцсети:</p>
+						<div class="footer__social-icons-list">
+							<a href="#" aria-label="Viber">
+								<img src="assets/icons/viber.svg" alt="Viber" />
+							</a>
+							<a href="#" aria-label="VK">
+								<img src="assets/icons/vk.svg" alt="VK" />
+							</a>
+							<a href="#" aria-label="Telegram">
+								<img src="assets/icons/telegram.svg" alt="Telegram" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__block footer__block--right">
+					<address class="footer__address">
+						<p>Адресc:<br />Минск, ул. Театральная, 7</p>
+					</address>
+					<div class="footer__contacts">
+						<p>Контакты:<br />+375 (17) 200-15-41</p>
+					</div>
 				</div>
 			</div>
 		</footer>
