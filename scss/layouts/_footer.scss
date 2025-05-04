@@ -6,7 +6,7 @@
 	padding: 1rem 1rem 0.5rem;
 
 	&__container {
-		max-width: 74rem; /* 1180px */
+		max-width: 74rem;
 		margin: 0 auto;
 		display: flex;
 		flex-wrap: wrap;
@@ -49,7 +49,7 @@
 
 		& p {
 			margin: 0;
-			font-size: 1rem;
+			font-size: 1.1rem;
 			line-height: 1.5;
 		}
 	}
@@ -59,7 +59,7 @@
 	&__social,
 	&__address,
 	&__contacts {
-		font-size: 0.875rem; /* ~14px */
+		font-size: 1.1rem; /* ~14px */
 		line-height: 1.5;
 
 		& p {
@@ -153,6 +153,14 @@
 			gap: 0.75rem;
 		}
 
+		&__hours,
+		&__tickets,
+		&__social,
+		&__address,
+		&__contacts {
+			font-size: 1rem;
+		}
+
 		&__block {
 			min-width: 8rem;
 		}
@@ -181,8 +189,13 @@
 			&--right {
 				gap: 6rem;
 			}
+		}
 
-			&__logo,
+		&__logo {
+			p {
+				font-size: 1rem;
+			}
+
 			&__social-icons-list {
 				justify-content: center;
 			}
@@ -192,7 +205,7 @@
 			&__social,
 			&__address,
 			&__contacts {
-				font-size: 0.875rem;
+				font-size: 1rem;
 			}
 		}
 	}
@@ -212,7 +225,7 @@
 			gap: 0.5rem;
 			padding: 0 0 0.5rem 0;
 		}
-		
+
 		&__social {
 			flex-direction: row;
 			gap: 0.5rem;

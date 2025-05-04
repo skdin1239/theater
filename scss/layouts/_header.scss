@@ -64,7 +64,7 @@
 
 	@media (max-width: 1024px) {
 		&__name {
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 		}
 
 		&__logo {
@@ -83,25 +83,14 @@
 		}
 
 		&__name {
-			font-size: 0.875rem;
+			font-size: 0.75rem;
 			margin: 0.25rem 0;
 		}
 
 		&__logo {
 			height: 4rem;
 			width: 4rem;
-			margin: 0.5rem 0;
-		}
-	}
-
-	@media (max-width: 480px) {
-		&__name {
-			font-size: 0.75rem;
-		}
-
-		&__logo {
-			height: 3.5rem;
-			width: 3.5rem;
+			margin: 0.5rem 0.5rem;
 		}
 	}
 }

@@ -7,10 +7,10 @@
 			font-style: italic;
 			font-weight: bolder;
 			color: #ffffff;
-			font-size: 64px;
+			font-size: 3rem;
 			text-align: center;
 			margin: 0 auto;
-			margin-bottom: 2rem;
+			margin: 1rem 0;
 		}
 	}
 
@@ -32,6 +32,7 @@
 	&__event_slides {
 		width: 100%;
 		height: 100%;
+		position: relative;
 		overflow: hidden;
 		display: flex;
 		align-items: center;
@@ -82,12 +83,14 @@
 
 	&__event_noevents {
 		font-family: 'PT-Sans';
-		font-size: 2rem;
-		color: #828282;
-		text-align: center;
-		position: absolute;
-		top: 50%;
+		font-size: 1.5rem;
+		width: 100%;
+		height: 100%;
+		top: 101%;
 		left: 50%;
+		color: #828282;
+		position: absolute;
+		text-align: center;
 		transform: translate(-50%, -50%);
 	}
 
@@ -125,7 +128,7 @@
 
 	// календарь
 	.calendar {
-		height: 550px;
+		height: 480px;
 		width: 43%;
 		overflow: hidden;
 		table {
@@ -134,7 +137,7 @@
 				margin: 0 auto;
 				margin-bottom: 8.9%; // 50px / 560px ≈ 8.9%
 				color: #ffffff;
-				font-size: 2.2rem;
+				font-size: 2rem;
 				font-family: 'PT-Sans';
 
 				.text {
@@ -147,7 +150,7 @@
 					font-family: 'PT-Sans';
 					color: #ffffff;
 					font-weight: 100;
-					font-size: 2.1rem;
+					font-size: 2rem;
 				}
 			}
 			tbody {
@@ -157,7 +160,7 @@
 						width: 10%;
 						color: #828282;
 						font-family: 'Cormorant', serif;
-						font-size: 3.5rem;
+						font-size: 3rem;
 						font-weight: bold;
 						cursor: pointer;
 						text-align: center;
@@ -222,7 +225,7 @@
 
 		&__show {
 			justify-content: space-around;
-			gap: 0;
+			gap: -50px;
 		}
 
 		&__event_slider {
@@ -234,12 +237,12 @@
 		}
 
 		&__event_title {
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 			margin: 20px 0 8px 0;
 		}
 
 		&__event_time {
-			font-size: 0.9rem;
+			font-size: 1rem;
 			margin: 3px 0;
 		}
 
@@ -265,7 +268,7 @@
 		// календарь
 		.calendar {
 			height: 400px;
-			width: 35%;
+			width: 45%;
 			table {
 				caption {
 					margin-bottom: 7%;
@@ -318,22 +321,17 @@
 	@media (max-width: 768px) {
 		&__title {
 			h2 {
-				font-size: 2rem;
+				font-size: 2.25rem;
 			}
 		}
 
 		&__show {
-			flex-direction: column-reverse;
-			gap: 10px;
+			justify-content: space-around;
+			gap: -50px;
 		}
 
 		&__event_slider {
-			min-height: 100px;
-			max-width: 350px;
-			margin: 0 auto;
-			width: 40%;
-			height: 40%;
-			margin-top: 10px;
+			width: 25%;
 		}
 
 		&__event_content {
@@ -341,60 +339,56 @@
 		}
 
 		&__event_title {
-			font-size: 1.2rem;
+			font-size: 1rem;
 			margin: 20px 0 8px 0;
 		}
 
 		&__event_time {
-			font-size: 0.8rem;
+			font-size: 0.9rem;
 			margin: 3px 0;
 		}
 
 		&__event_noevents {
-			height: 100%;
 			font-size: 1rem;
 		}
 
 		&__event_arrow {
 			svg {
 				width: 20px;
-				height: 40px;
+				height: 46px;
 			}
 		}
 
 		&__event_arrow_prev {
-			left: -12px;
+			left: -25px;
 		}
 
 		&__event_arrow_next {
-			right: -12px;
+			right: -25px;
 		}
 
 		// календарь
 		.calendar {
-			margin: 0 auto;
-			height: 270px;
-			max-width: 400px;
-			width: 100%;
+			height: 260px;
+			width: 45%;
 			table {
-				width: 100%;
 				caption {
 					margin-bottom: 7%;
-					font-size: 1.2rem;
+					font-size: 1.25rem;
 
 					.text {
-						width: 140px;
+						width: 130px;
 					}
 				}
 				thead {
 					th {
-						font-size: 1.2rem;
+						font-size: 1.25rem;
 					}
 				}
 				tbody {
 					tr {
 						td {
-							font-size: 1.8rem;
+							font-size: 1.5rem;
 						}
 					}
 				}
@@ -407,8 +401,8 @@
 			cursor: pointer;
 
 			svg {
-				margin-bottom: -12px;
-				width: 15px;
+				margin-bottom: -15px;
+				width: 12px;
 			}
 
 			&_left {
@@ -425,19 +419,27 @@
 			}
 		}
 	}
+
 	@media (max-width: 480px) {
 		&__title {
 			h2 {
-				font-size: 2rem;
+				font-size: 1.5rem;
 			}
 		}
 
 		&__show {
-			flex-direction: column;
-			gap: 15px;
+			flex-direction: column-reverse;
+			justify-content: center;
+			gap: 0;
 		}
 
 		&__event_slider {
+			height: 100%;
+			margin: 0 auto;
+			width: 50%;
+		}
+
+		&__event_slides {
 			min-height: 100px;
 			margin: 0 auto;
 			width: 50%;
@@ -449,24 +451,26 @@
 		}
 
 		&__event_title {
-			font-size: 1.7rem;
+			font-size: 1rem;
 			margin: 20px 0 8px 0;
 		}
 
 		&__event_time {
-			font-size: 1.2rem;
+			font-size: 0.75rem;
 			margin: 3px 0;
 		}
 
 		&__event_noevents {
-			height: 100%;
-			font-size: 1.5rem;
+			position: absolute;
+			top: 91%;
+			width: 200px;
+			font-size: 0.75rem;
 		}
 
 		&__event_arrow {
 			svg {
-				width: 26px;
-				height: 52px;
+				width: 20px;
+				height: 46px;
 			}
 		}
 
@@ -482,12 +486,12 @@
 		.calendar {
 			margin: 0 auto;
 			height: 360px;
-			width: 85%;
+			width: 90%;
 			table {
 				width: 100%;
 				caption {
 					margin: 7% 0;
-					font-size: 1.5rem;
+					font-size: 1.25rem;
 
 					.text {
 						width: 160px;
@@ -495,13 +499,13 @@
 				}
 				thead {
 					th {
-						font-size: 1.6rem;
+						font-size: 1.25rem;
 					}
 				}
 				tbody {
 					tr {
 						td {
-							font-size: 2.5rem;
+							font-size: 2rem;
 						}
 					}
 				}
@@ -514,8 +518,8 @@
 			cursor: pointer;
 
 			svg {
-				margin-bottom: -12px;
-				width: 15px;
+				margin-bottom: -14px;
+				width: 12px;
 			}
 
 			&_left {
