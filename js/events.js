@@ -48,7 +48,7 @@ function renderTickets(tickets) {
 									</div>
 							</div>
 					</div>
-					<button class="tickets__buy">Забронировать билет</button>
+					<button class="tickets__buy">Забронировать</button>
 			`
 
 		// Добавляем карточку в сетку
@@ -65,14 +65,6 @@ function renderTickets(tickets) {
 				window.location.href = `events-page.html?title=${encodedTitle}`
 			})
 		}
-	})
-
-	// Обработчик для кнопок "Забронировать билет"
-	document.querySelector('.tickets__buy').forEach(button => {
-		// Кодируем название спектакля для URL
-		const encodedTitle = encodeURIComponent(ticket.title)
-		// Переходим на страницу с подробностями
-		window.location.href = `events-page.html?title=${encodedTitle}`
 	})
 }
 

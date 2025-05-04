@@ -2,10 +2,10 @@
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
-	padding: 80px 0 40px 0;
+	padding: 5% 0 2% 0;
 
 	&__heading {
-		font-size: 4rem;
+		font-size: 3rem;
 		margin-bottom: 2rem;
 		text-align: left;
 		font-family: 'Cormorant';
@@ -15,7 +15,7 @@
 	}
 
 	&__title {
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		margin-bottom: 2rem;
 		text-align: left;
 		font-weight: bolder;
@@ -34,7 +34,9 @@
 		&_input {
 			background-color: #3333;
 			border: 1px solid #333;
-			padding: 10px 150px 5px 20px;
+			color: white;
+			font-size: 1.5rem;
+			padding: 10px 130px 5px 20px;
 			border-radius: 24px;
 
 			&:hover {
@@ -56,7 +58,7 @@
 		border: 1px solid #333;
 		padding: 10px 10px 0 10px;
 		background-color: #3333;
-		border-radius: 4px;
+		border-radius: 50px;
 		transition: #4b4bff 0.3s, box-shadow 0.3s;
 		color: #828282;
 
@@ -101,7 +103,7 @@
 	&__grid {
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
+		gap: 15px;
 	}
 
 	&__item {
@@ -111,7 +113,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: left;
-		background-color: #D9D9D9;
+		background-color: #d9d9d9;
 		border-radius: 8px;
 		overflow: hidden;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -195,13 +197,6 @@
 		font-family: 'PT-Sans', sans-serif;
 	}
 
-	&__cast {
-		font-size: 1rem;
-		margin: 0 10px 10px;
-		color: #000000;
-		font-family: 'PT-Sans', sans-serif;
-	}
-
 	&__buy {
 		position: absolute;
 		right: 0;
@@ -221,6 +216,103 @@
 
 		&:hover {
 			background-color: #0056b3;
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__heading {
+			font-size: 2.25rem;
+		}
+
+		&__controls_select {
+			width: 150px;
+		}
+
+		&__controls {
+			font-size: 1rem;
+
+			&_input {
+				font-size: 1.25rem;
+				padding: 10px 20px 5px 20px;
+				border-radius: 24px;
+			}
+		}
+
+		&__grid {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+		&__type {
+			font-size: 1rem;
+			padding: 0 10px 3px 10px;
+		}
+
+		&__time,
+		&__date,
+		&__age,
+		&__price {
+			font-size: 1rem;
+		}
+
+		&__buy {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__heading {
+			font-size: 1.5rem;
+		}
+
+		&__title {
+			font-size: 1rem;
+		}
+
+		&__controls_select {
+			width: 100px;
+		}
+
+		&__controls {
+			font-size: 0.75rem;
+
+			&_input {
+				font-size: 0.75rem;
+				padding: 10px 20px 5px 20px;
+				border-radius: 24px;
+			}
+		}
+
+		&__item {
+			height: 170px;
+			display: flex;
+			img {
+				width: 120px;
+				height: 120px;
+			}
+		}
+
+		&__grid {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+		&__type {
+			font-size: 0.75rem;
+			padding: 0 10px 2px 10px;
+		}
+
+		&__time,
+		&__date,
+		&__age,
+		&__price {
+			font-size: 0.75rem;
+		}
+
+		&__buy {
+			left: 54%;
+			width: 40%;
+			font-size: 0.75rem;
 		}
 	}
 }
