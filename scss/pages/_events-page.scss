@@ -295,13 +295,13 @@
 		}
 	
 		&__title {
-			font-size: 1rem;
+			font-size: 1.25rem;
 			margin-bottom: 30px;
 		}
 
 		&__type,
 		&__age {
-			font-size: 0.75rem;
+			font-size: 1rem;
 			padding: 4px 10px;
 		}
 	
@@ -316,22 +316,22 @@
 		&__buy-online {
 			display: flex;
 			flex-direction: column;
-			font-size: 0.75rem;
+			font-size: 1rem;
 	
 			span {
-				font-size: 0.75rem;
+				font-size: 1rem;
 			}
 		}
 	
 		&__buy-online a {
-			font-size: 0.75rem;
+			font-size: 1rem;
 		}
 	
 		&__date,
 		&__time,
 		&__director,
 		&__price {
-			font-size: 0.75rem;
+			font-size: 1rem;
 		}
 	
 		&__description {

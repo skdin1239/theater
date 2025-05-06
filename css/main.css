@@ -2369,11 +2369,11 @@ nav {
     transform: scale(0.7);
   }
   .event__title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-bottom: 30px;
   }
   .event__type, .event__age {
-    font-size: 0.75rem;
+    font-size: 1rem;
     padding: 4px 10px;
   }
   .event_second-part {
@@ -2385,16 +2385,16 @@ nav {
   .event__buy-tel, .event__buy-online {
     display: flex;
     flex-direction: column;
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .event__buy-tel span, .event__buy-online span {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .event__buy-online a {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .event__date, .event__time, .event__director, .event__price {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .event__description {
     font-size: 1rem;
