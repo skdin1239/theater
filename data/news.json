@@ -1,5 +1,6 @@
 [
   {
+		"id": 1,
     "title": "Премьера спектакля 'Весеннее пробуждение",
     "date": "2025-05-08",
     "image": "./assets/news/new10.jpeg",
@@ -8,6 +9,7 @@
     "category": "events"
   },
   {
+		"id": 2,
     "title": "Мастер-класс по актерскому мастерству",
     "date": "2025-05-08",
     "image": "./assets/news/new9.jpeg",
@@ -16,6 +18,7 @@
     "category": "events"
   },
   {
+		"id": 3,
     "title": "Гастроли театра в Минске",
     "date": "2025-05-09",
     "image": "./assets/news/new8.jpeg",
@@ -24,6 +27,7 @@
     "category": "events"
   },
   {
+		"id": 4,
     "title": "Встреча с режиссером спектакля",
     "date": "2025-05-10",
     "image": "./assets/news/new4.jpeg",
@@ -32,6 +36,7 @@
     "category": "events"
   },
   {
+		"id": 5,
     "title": "Театр участвует в международном фестивале",
     "date": "2025-05-11",
     "image": "./assets/news/new5.jpeg",
@@ -40,6 +45,7 @@
     "category": "events"
   },
   {
+		"id": 6,
     "title": "Награда за лучший спектакль года",
     "date": "2025-05-12",
     "image": "./assets/news/new6.jpeg",
@@ -48,6 +54,7 @@
     "category": "releases"
   },
   {
+		"id": 7,
     "title": "Благотворительный спектакль для детей",
     "date": "2025-05-15",
     "image": "./assets/news/new7.jpeg",
@@ -56,6 +63,7 @@
     "category": "events"
   },
   {
+		"id": 8,
     "title": "Обновление репертуара театра",
     "date": "2025-05-16",
     "image": "./assets/news/new3.jpg",
@@ -64,6 +72,7 @@
     "category": "releases"
   },
   {
+		"id": 9,
     "title": "Презентация нового проекта",
     "date": "2025-05-18",
     "image": "./assets/news/new2.jpg",
@@ -72,6 +81,7 @@
     "category": "events"
   },
   {
+		"id": 10,
     "title": "Юбилей театра: 50 лет на сцене",
     "date": "2025-05-20",
     "image": "./assets/news/new1.jpg",

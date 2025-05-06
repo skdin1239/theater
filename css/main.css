@@ -1948,6 +1948,7 @@ nav {
 .news-detail {
   max-width: 1180px;
   margin: 0 auto;
+  margin: 2% 0;
   display: flex;
   color: #ffffff;
   font-family: "Cormorant";
