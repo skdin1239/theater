@@ -30,16 +30,24 @@ const todayStr = `${today.getFullYear()}-${(today.getMonth() + 1)
 async function loadEvents() {
 	try {
 		const response = await fetch('./data/events.json')
+		if (!response.ok) {
+			throw new Error(`HTTP error! Status: ${response.status}`)
+		}
 		const data = await response.json()
 		eventsByDate = {}
-		data.events.forEach(event => {
+		if (!Array.isArray(data)) {
+			throw new Error('Данные событий не являются массивом')
+		}
+		data.forEach(event => {
 			if (!eventsByDate[event.date]) {
 				eventsByDate[event.date] = []
 			}
 			eventsByDate[event.date].push(event)
 		})
+		return data
 	} catch (error) {
 		console.error('Ошибка загрузки событий:', error)
+		return []
 	}
 }
 

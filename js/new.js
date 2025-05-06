@@ -12,15 +12,8 @@ async function loadNews() {
 		}
 		const news = await response.json()
 
-		// Удаляем дубликаты по id
-		const uniqueNews = Array.from(
-			new Map(news.map(item => [item.id, item])).values()
-		)
-
 		// Сортируем по дате убывания
-		const sortedNews = uniqueNews.sort(
-			(a, b) => new Date(b.date) - new Date(a.date)
-		)
+		const sortedNews = news.sort((a, b) => new Date(b.date) - new Date(a.date))
 
 		if (sortedNews.length === 0) {
 			newsGrid.innerHTML = '<p class="new__empty">Новостей нет.</p>'
@@ -39,9 +32,13 @@ async function loadNews() {
 			const month = dateObj.toLocaleString('ru', { month: 'long' })
 
 			newsItem.innerHTML = `
-        <img class="new__image" src="${item.image}" alt="${item.title}" loading="lazy" />
+        <img class="new__image" src="${item.image}" alt="${
+				item.title
+			}" loading="lazy" />
         <div class="new__date">${day} <br/> ${month}</div>
-        <h3 class="new__item-title"><a href="news-page.html?id=${item.id}">${item.title}</a></h3>
+        <h3 class="new__item-title"><a href="news-page.html?title=${encodeURIComponent(
+					item.title
+				)}">${item.title}</a></h3>
         <p class="new__description">${item.preview}</p>
       `
 			newsGrid.appendChild(newsItem)
@@ -66,7 +63,7 @@ function setupDragScroll(container) {
 	let startX
 	let scrollLeft
 
-	container.addEventListener('mousedown', (e) => {
+	container.addEventListener('mousedown', e => {
 		isDown = true
 		container.classList.add('active')
 		startX = e.pageX - container.offsetLeft
@@ -83,7 +80,7 @@ function setupDragScroll(container) {
 		container.classList.remove('active')
 	})
 
-	container.addEventListener('mousemove', (e) => {
+	container.addEventListener('mousemove', e => {
 		if (!isDown) return
 		e.preventDefault()
 		const x = e.pageX - container.offsetLeft
@@ -92,12 +89,16 @@ function setupDragScroll(container) {
 	})
 
 	// Поддержка прокрутки колесом мыши по горизонтали
-	container.addEventListener('wheel', (e) => {
-		if (e.deltaY !== 0) {
-			e.preventDefault()
-			container.scrollLeft += e.deltaY
-		}
-	}, { passive: false })
+	container.addEventListener(
+		'wheel',
+		e => {
+			if (e.deltaY !== 0) {
+				e.preventDefault()
+				container.scrollLeft += e.deltaY
+			}
+		},
+		{ passive: false }
+	)
 }
 
 document.addEventListener('DOMContentLoaded', loadNews)

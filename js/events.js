@@ -5,13 +5,19 @@ async function loadTickets() {
 			throw new Error(`HTTP error! Status: ${response.status}`)
 		}
 		const data = await response.json()
-		const tickets = data.events
-		return tickets.sort((a, b) => new Date(b.date) - new Date(a.date))
+		eventsByDate = {}
+		if (!Array.isArray(data)) {
+			throw new Error('Данные событий не являются массивом')
+		}
+		data.forEach(event => {
+			if (!eventsByDate[event.date]) {
+				eventsByDate[event.date] = []
+			}
+			eventsByDate[event.date].push(event)
+		})
+		return data
 	} catch (error) {
-		console.error('Ошибка загрузки билетов:', error)
-		const ticketsGrid = document.getElementById('ticketsGrid')
-		ticketsGrid.innerHTML =
-			'<p>Не удалось загрузить билеты. Пожалуйста, попробуйте позже.</p>'
+		console.error('Ошибка загрузки событий:', error)
 		return []
 	}
 }

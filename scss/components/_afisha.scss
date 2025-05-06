@@ -331,6 +331,7 @@
 		}
 
 		&__event_slider {
+			max-width: 130px;
 			width: 25%;
 		}
 
@@ -339,7 +340,7 @@
 		}
 
 		&__event_title {
-			font-size: 1rem;
+			font-size: 0.75rem;
 			margin: 20px 0 8px 0;
 		}
 
@@ -434,9 +435,10 @@
 		}
 
 		&__event_slider {
+			max-width: max-content;
 			height: 100%;
 			margin: 0 auto;
-			width: 50%;
+			width: 100%;
 		}
 
 		&__event_slides {
@@ -475,11 +477,11 @@
 		}
 
 		&__event_arrow_prev {
-			left: -18px;
+			left: 50px;
 		}
 
 		&__event_arrow_next {
-			right: -18px;
+			right: 50px;
 		}
 
 		// календарь

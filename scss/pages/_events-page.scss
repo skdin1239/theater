@@ -1,26 +1,9 @@
 .event {
 	padding: 40px 20px;
-	position: relative; // Для позиционирования псевдоэлемента
+	position: relative;
 	overflow-x: hidden;
-	// Псевдоэлемент для фонового изображения с размытием и прозрачностью
 	main {
 		max-width: 1180px;
-	}
-	&::before {
-		content: '';
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: #010000;
-		background-image: url('../assets/images/background.jpg');
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		filter: blur(3px);
-		opacity: 0.1;
-		z-index: -1;
 	}
 
 	&__content {
@@ -30,13 +13,13 @@
 			255,
 			255,
 			0.1
-		); // Полупрозрачный белый фон для читаемости
+		);
 		padding: 30px;
 		border-radius: 12px;
 		box-shadow: 0 0 20px rgb(255, 255, 255, 0.1);
 		font-family: 'PT-Sans', sans-serif;
-		position: relative; // Чтобы контент был выше фона
-		z-index: 1; // Контент поверх псевдоэлемента
+		position: relative;
+		z-index: 1;
 	}
 
 	&__image {
@@ -164,55 +147,211 @@
 		}
 	}
 
-	@media (max-width: 768px) {
-		padding: 20px 10px;
-
-		&::before {
-			filter: blur(8px); // Уменьшаем размытие для мобильных
-		}
-
-		&__content {
-			padding: 20px;
-		}
-
+	@media (max-width: 1250px) {
+	
 		&__image {
-			max-height: 300px;
+			max-height: 330px;
 		}
-
+	
 		&__title {
-			font-size: 1.8rem;
+			font-size: 2.5rem;
+			margin-bottom: 50px;
 		}
 
 		&__type,
-		&__age,
+		&__age {
+			font-size: 1rem;
+		}
+	
+		&_second-part {
+			margin-top: 30px;
+		}
+	
+		&__buy-tel,
+		&__buy-online {
+			display: flex;
+			flex-direction: column;
+			font-size: 1.2rem;
+	
+			span {
+				font-size: 1rem;
+			}
+		}
+	
+		&__buy-online a {
+			font-size: 0.8rem;
+		}
+	
 		&__date,
 		&__time,
 		&__director,
 		&__price {
-			font-size: 1rem;
+			font-size: 1.25rem;
 		}
-
-		&__description,
+	
+		&__description {
+			font-size: 1.5rem;
+		}
+	
+		&__back {
+			font-size: 1.5rem;
+		}
+	
 		&__cast {
-			font-size: 1rem;
-
+			font-size: 1.5rem;
+	
 			h3 {
-				font-size: 1.2rem;
+				font-size: 2.5rem;
 			}
 		}
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 920px) {
+		& { 
+			padding: 0 0 3.5% 0;
+		}
+
 		&__content {
-			width: 95%;
+			padding: 2%;
 		}
 
 		&__image {
-			max-height: 200px;
+			max-height: 180px;
 		}
-
+	
 		&__title {
 			font-size: 1.5rem;
+			margin-bottom: 30px;
+		}
+
+		&__type,
+		&__age {
+			font-size: 0.75rem;
+			padding: 4px 10px;
+		}
+	
+		&_second-part {
+			margin-top: 30px;
+			gap: 20px;
+		}
+	
+		&__buy-tel,
+		&__buy-online {
+			display: flex;
+			flex-direction: column;
+			font-size: 0.75rem;
+	
+			span {
+				font-size: 0.75rem;
+			}
+		}
+	
+		&__buy-online a {
+			font-size: 0.75rem;
+		}
+	
+		&__date,
+		&__time,
+		&__director,
+		&__price {
+			font-size: 0.75rem;
+		}
+	
+		&__description {
+			font-size: 1rem;
+		}
+	
+		&__back {
+			font-size: 1rem;
+		}
+	
+		&__cast {
+			font-size: 1rem;
+	
+			h3 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	@media (max-width: 520px) {
+		& { 
+			padding: 0 0 3.5% 0;
+		}
+
+		&__content {
+			padding: 0 15%;
+		}
+
+		&__header {
+			flex-direction: column;
+		}
+
+		&__image {
+			max-height: 320px;
+			border-radius: 24px;
+			margin: 0;
+			transform: scale(0.7);
+		}
+	
+		&__title {
+			font-size: 1rem;
+			margin-bottom: 30px;
+		}
+
+		&__type,
+		&__age {
+			font-size: 0.75rem;
+			padding: 4px 10px;
+		}
+	
+		&_second-part {
+			display: flex;
+			flex-direction: column;
+			margin-top: 5px;
+			gap: 0;
+		}
+	
+		&__buy-tel,
+		&__buy-online {
+			display: flex;
+			flex-direction: column;
+			font-size: 0.75rem;
+	
+			span {
+				font-size: 0.75rem;
+			}
+		}
+	
+		&__buy-online a {
+			font-size: 0.75rem;
+		}
+	
+		&__date,
+		&__time,
+		&__director,
+		&__price {
+			font-size: 0.75rem;
+		}
+	
+		&__description {
+			font-size: 1rem;
+		}
+	
+		&__back {
+			font-size: 1rem;
+		}
+	
+		&__cast {
+			font-size: 1rem;
+	
+			h3 {
+				font-size: 1.5rem;
+			}
+		}
+		&__back {
+			margin-top: 0;
+			margin-bottom: 1rem;
 		}
 	}
 }

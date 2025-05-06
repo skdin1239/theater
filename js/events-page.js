@@ -18,10 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 		.then(data => {
 			console.log('Загруженные данные:', data) // Для отладки
+			// Проверяем, что data является массивом
+			if (!Array.isArray(data)) {
+				throw new Error('Данные событий не являются массивом')
+			}
 			// Найти событие по title
-			const event = data.events.find(
-				e => e.title === decodeURIComponent(eventTitle)
-			)
+			const event = data.find(e => e.title === decodeURIComponent(eventTitle))
 			if (!event) {
 				console.error('Событие не найдено:', decodeURIComponent(eventTitle))
 				return
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Заполнить элементы страницы
 			const eventImage = document.querySelector('.event__image')
-			const eventTitleElement = document.querySelector('.event__title') // Переименовано, чтобы избежать конфликта
+			const eventTitleElement = document.querySelector('.event__title')
 			const eventType = document.querySelector('.event__type')
 			const eventAge = document.querySelector('.event__age')
 			const eventDate = document.querySelector('.event__date')
@@ -84,5 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 		.catch(error => {
 			console.error('Ошибка при загрузке данных:', error)
+			// Отобразить сообщение об ошибке на странице
+			const eventContainer = document.querySelector('.event')
+			if (eventContainer) {
+				eventContainer.innerHTML =
+					'<p>Не удалось загрузить событие. Попробуйте позже.</p>'
+			}
 		})
 })
