@@ -1949,6 +1949,7 @@ nav {
   max-width: 1180px;
   margin: 0 auto;
   margin: 2% 0;
+  padding: 1% 0;
   display: flex;
   color: #ffffff;
   font-family: "Cormorant";
@@ -2072,7 +2073,7 @@ nav {
 }
 @media (max-width: 768px) {
   .news-detail__main {
-    padding: 0 3%;
+    padding: 2% 3%;
   }
   .news-detail__sidebar h2 {
     font-size: 2rem;
