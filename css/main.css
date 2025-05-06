@@ -1194,7 +1194,7 @@ nav {
   max-width: 1180px;
   width: 100%;
   gap: 2rem;
-  padding: 1rem;
+  padding: 1rem 0 0 0;
 }
 .new__grid::-webkit-scrollbar {
   display: none;
@@ -1261,7 +1261,7 @@ nav {
 .new__all-link {
   display: flex;
   justify-content: center;
-  margin: 1.25rem 0;
+  margin: 0 0 1.25rem 0;
 }
 .new__all-link a {
   color: #a80000;

@@ -32,13 +32,9 @@ async function loadNews() {
 			const month = dateObj.toLocaleString('ru', { month: 'long' })
 
 			newsItem.innerHTML = `
-        <img class="new__image" src="${item.image}" alt="${
-				item.title
-			}" loading="lazy" />
+        <img class="new__image" src="${item.image}" alt="${item.title}" loading="lazy" />
         <div class="new__date">${day} <br/> ${month}</div>
-        <h3 class="new__item-title"><a href="news-page.html?title=${encodeURIComponent(
-					item.title
-				)}">${item.title}</a></h3>
+        <h3 class="new__item-title"><a href="news-page.html?id=${item.id}">${item.title}</a></h3>
         <p class="new__description">${item.preview}</p>
       `
 			newsGrid.appendChild(newsItem)
