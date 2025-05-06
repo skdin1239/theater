@@ -6,6 +6,10 @@
   font-family: "Molot";
   src: url("../fonts/molot/Molot.otf") format("opentype");
 }
+@font-face {
+  font-family: "Cormorant";
+  src: url("../fonts/Cormorant-Italic-VariableFont_wght.ttf") format("opentype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +23,10 @@
 @font-face {
   font-family: "Molot";
   src: url("../fonts/molot/Molot.otf") format("opentype");
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("../fonts/Cormorant-Italic-VariableFont_wght.ttf") format("opentype");
 }
 body {
   position: relative;
