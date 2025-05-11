@@ -61,7 +61,8 @@ function renderTickets(tickets) {
 		ticketsGrid.appendChild(ticketItem)
 
 		// Находим изображение внутри карточки
-		const img = ticketItem.querySelector('img')
+		const img = ticketItem.querySelector('button')
+		//const button = ticketItem.querySelector('button')
 		if (img) {
 			// Добавляем обработчик клика
 			;(img || button).addEventListener('click', () => {

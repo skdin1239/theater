@@ -413,7 +413,7 @@ nav {
 .afisha .calendar table tbody tr td.has-events::after {
   content: "";
   position: absolute;
-  bottom: 1.8%;
+  bottom: -8%;
   left: 50%;
   transform: translateX(-50%);
   width: 6px;
@@ -1618,7 +1618,7 @@ nav {
   align-items: flex-start;
 }
 .about__row--photo-text .about__text {
-  width: 30%;
+  width: 34%;
 }
 .about__row--photo-text .about__image {
   width: 65%;
@@ -2275,6 +2275,7 @@ nav {
   }
   .event_second-part {
     margin-top: 30px;
+    gap: 25px;
   }
   .event__buy-tel, .event__buy-online {
     display: flex;

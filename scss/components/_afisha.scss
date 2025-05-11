@@ -135,7 +135,7 @@
 			border-collapse: collapse;
 			caption {
 				margin: 0 auto;
-				margin-bottom: 8.9%; // 50px / 560px ≈ 8.9%
+				margin-bottom: 8.9%;
 				color: #ffffff;
 				font-size: 2rem;
 				font-family: 'PT-Sans';
@@ -154,7 +154,7 @@
 				}
 			}
 			tbody {
-				height: 80.3%; // 450px / 560px ≈ 80.3%
+				height: 80.3%;
 				tr {
 					td {
 						width: 10%;
@@ -173,7 +173,7 @@
 						&::after {
 							content: '';
 							position: absolute;
-							bottom: 1.8%; // 10px / 560px ≈ 1.8%
+							bottom: -8%;
 							left: 50%;
 							transform: translateX(-50%);
 							width: 6px;
