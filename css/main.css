@@ -1797,13 +1797,6 @@ nav {
   border-color: #007bff;
   box-shadow: 0 0 8px #4b4bff;
 }
-.news__controls_select::picker-icon {
-  color: #666;
-  transition: transform 0.3s;
-}
-.news__controls_select:open::picker-icon {
-  transform: rotate(180deg);
-}
 .news__controls_select option {
   padding: 12px 15px;
   font-size: 1.2rem;

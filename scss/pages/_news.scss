@@ -75,14 +75,7 @@
 			box-shadow: 0 0 8px #4b4bff;
 		}
 
-		&::picker-icon {
-			color: #666;
-			transition: transform 0.3s;
-		}
-
-		&:open::picker-icon {
-			transform: rotate(180deg);
-		}
+		
 
 		option {
 			padding: 12px 15px;
