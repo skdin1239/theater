@@ -1431,10 +1431,6 @@ nav {
   margin: 15px;
   border-radius: 6px;
 }
-.tickets__item img:active {
-  position: absolute;
-  transform: scale(2);
-}
 .tickets .direction {
   display: flex;
   flex-direction: row;
@@ -2357,10 +2353,9 @@ nav {
     max-height: 320px;
     border-radius: 24px;
     margin: 0;
-    transform: scale(0.7);
   }
   .event__title {
-    font-size: 1.25 rem;
+    font-size: 1.25rem;
     margin-bottom: 30px;
   }
   .event__type, .event__age {
