@@ -50,14 +50,10 @@
 				<a href="index.html">
 					<img src="assets/icons/logo.svg" alt="Логотип театра" />
 				</a>
-			</div><p>Билеты</p>
+			</div>
+			<p>О театре</p>
 			<input type="checkbox" id="nav-toggle" class="nav__toggle" />
-			<label
-				class="nav__hamburger"
-				for="nav-toggle"
-				data-state="closed"
-				aria-label="Открыть меню"
-			>
+			<label class="nav__hamburger" for="nav-toggle" data-state="closed">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -84,18 +80,23 @@
 
 		<main id="ticketPage">
 			<section class="tickets">
-                <h2 class="tickets__heading">Билеты</h2>
-                <div class="tickets__controls">
-                    <input class="tickets__controls_input" type="text" id="searchInput" placeholder="Поиск по названию">
-                    <select class="tickets__controls_select" id="categoryFilter">
-                        <option value="">Все типы</option>
-                        <option value="комедия">Комедия</option>
-                        <option value="балет">Балет</option>
-                        <option value="опера">Опера</option>
-                    </select>
-                </div>
-                <div class="tickets__grid" id="ticketsGrid"></div>
-            </section>
+				<h2 class="tickets__heading">Билеты</h2>
+				<div class="tickets__controls">
+					<input
+						class="tickets__controls_input"
+						type="text"
+						id="searchInput"
+						placeholder="Поиск по названию"
+					/>
+					<select class="tickets__controls_select" id="categoryFilter">
+						<option value="">Все типы</option>
+						<option value="комедия">Комедия</option>
+						<option value="балет">Балет</option>
+						<option value="опера">Опера</option>
+					</select>
+				</div>
+				<div class="tickets__grid" id="ticketsGrid"></div>
+			</section>
 		</main>
 
 		<footer class="footer">
@@ -120,13 +121,16 @@
 					<div class="footer__social">
 						<p>Наши соцсети:</p>
 						<div class="footer__social-icons-list">
-							<a href="#" aria-label="Viber">
-								<img src="assets/icons/viber.svg" alt="Viber" />
+							<a
+								href="https://www.instagram.com/bgm_teatr/?hl=ru"
+								aria-label="Instagram"
+							>
+								<img src="assets/icons/instagram.svg" alt="Instagram" />
 							</a>
-							<a href="#" aria-label="VK">
+							<a href="https://vk.com/bgm_teatr" aria-label="VK">
 								<img src="assets/icons/vk.svg" alt="VK" />
 							</a>
-							<a href="#" aria-label="Telegram">
+							<a href="https://t.me/bgmtheatre" aria-label="Telegram">
 								<img src="assets/icons/telegram.svg" alt="Telegram" />
 							</a>
 						</div>
@@ -142,8 +146,6 @@
 				</div>
 			</div>
 		</footer>
-
-		<script src="js/nav-menu.js"></script>
 		<script src="js/events.js"></script>
 	</body>
 </html>

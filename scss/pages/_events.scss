@@ -118,13 +118,22 @@
 		border-radius: 8px;
 		overflow: hidden;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		transition: margin 1s;
+
+		&:hover {
+			margin: 0 -10px 0 10px;
+		}
 
 		img {
 			width: 120px;
 			height: 120px;
 			margin: 15px;
 			border-radius: 6px;
-			cursor: pointer;
+
+			&:active {
+				position: absolute;
+				transform: scale(2);
+			}
 		}
 	}
 

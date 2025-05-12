@@ -10,6 +10,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(8px);
 	position: sticky;
 	top: 0;
 	z-index: 1000;
@@ -147,6 +148,9 @@ nav {
 	}
 
 	@media (max-width: 768px) {
+		& {
+			backdrop-filter: none;
+		}
 		p {
 			display: block;
 			width: 80%;

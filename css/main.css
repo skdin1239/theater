@@ -16,26 +16,14 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "PT-Sans";
-  src: url("../fonts/PTSans-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Molot";
-  src: url("../fonts/molot/Molot.otf") format("opentype");
-}
-@font-face {
-  font-family: "Cormorant";
-  src: url("../fonts/Cormorant-Italic-VariableFont_wght.ttf") format("opentype");
-}
 body {
   position: relative;
   background-color: #010000;
   display: flex;
   flex-direction: column;
-  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 main {
@@ -63,6 +51,8 @@ nav {
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -176,6 +166,10 @@ nav {
   .nav {
     min-height: 3rem;
     background: rgba(0, 0, 0, 0.7);
+  }
+  .nav {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
   .nav p {
     display: block;
@@ -1264,17 +1258,8 @@ nav {
   margin: 0 0 1.25rem 0;
 }
 .new__all-link a {
-  color: #a80000;
   text-decoration: underline;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-.new__all-link a:hover, .new__all-link a:focus-visible {
-  color: #800000;
-}
-.new__all-link a:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
 }
 .new__loading, .new__empty, .new__error {
   font-family: "PT-Sans", sans-serif;
@@ -1435,13 +1420,20 @@ nav {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: margin 1s;
+}
+.tickets__item:hover {
+  margin: 0 -10px 0 10px;
 }
 .tickets__item img {
   width: 120px;
   height: 120px;
   margin: 15px;
   border-radius: 6px;
-  cursor: pointer;
+}
+.tickets__item img:active {
+  position: absolute;
+  transform: scale(2);
 }
 .tickets .direction {
   display: flex;
@@ -1830,7 +1822,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 .news__item {
   position: relative;
@@ -1846,6 +1838,11 @@ nav {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+.news__item img:hover {
+  opacity: 0.5;
 }
 .news__date {
   position: absolute;
@@ -2370,7 +2367,7 @@ nav {
     transform: scale(0.7);
   }
   .event__title {
-    font-size: 1.25rem;
+    font-size: 1.25 rem;
     margin-bottom: 30px;
   }
   .event__type, .event__age {

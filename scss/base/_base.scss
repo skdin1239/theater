@@ -1,11 +1,11 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
-
 body {
 	position: relative;
 	background-color: #010000;
-	@include flex-column;
-	@include flex-center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 }
 
 main {
